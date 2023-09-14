@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Edit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<header>
+
+    <div th:include="layout::header"></div>
+
+</header>
+
+<br>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color:blanchedalmond">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/admin/books/view"><span class="glyphicon glyphicon-edit"></span>EDIT/DELETE BOOKS</a></li>
+                <li><a href="/admin/books/add"><span class="glyphicon glyphicon-plus-sign"></span>ADD BOOKS</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="jumbotron text-center">
+    <h1>Edit Book</h1>
+</div>
+
+<section id="content">
+    <h4>Edit Book Details</h4>
+    <form action="/admin/books/edit" method="post">
+
+        <div class="mb-3">
+            <label for="bookID" class="form-label">bookID</label>
+            <input type="text" class="form-control" id="bookID" placeholder="bookID" name="bookID"
+                   th:value="${bookID}">
+        </div>
+
+        <div class="mb-3">
+            <label for="title" class="form-label">title</label>
+            <input type="text" class="form-control" id="title" placeholder="title" name="title"
+                   th:value="${title}">
+        </div>
+
+        <div class="mb-3">
+            <label for="ISBN" class="form-label">ISBN</label>
+            <input type="text" class="form-control" id="ISBN" placeholder="ISBN" name="ISBN"
+                   th:value="${ISBN}">
+        </div>
+
+        <div class="mb-3">
+            <label for="author" class="form-label">author</label>
+            <input type="text" class="form-control" id="author" placeholder="author" name="author"
+                   th:value="${author}">
+        </div>
+        <div class="mb-3">
+            <label for="month" class="form-label">month</label>
+            <input type="text" class="form-control" id="month" placeholder="month" name="month"
+                   th:value="${datePublished.month}">
+        </div>
+        <div class="mb-3">
+            <label for="day" class="form-label">day</label>
+            <input type="text" class="form-control" id="day" placeholder="day" name="day"
+                   th:value="${datePublished.day}">
+        </div>
+        <div class="mb-3">
+            <label for="year" class="form-label">year</label>
+            <input type="text" class="form-control" id="year" placeholder="year" name="year"
+                   th:value="${datePublished.year}">
+        </div>
+        <div class="mb-3">
+            <label for="genre" class="form-label">genre</label>
+            <input type="text" class="form-control" id="genre"
+                   placeholder="genre (fantasy, horror, nonfiction, fiction, scifi, romance, comedy, adventure, or tragedy)"
+                   name="genre"
+                   th:value="${genre}">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">price</label>
+            <input type="text" class="form-control" id="price" placeholder="price" name="price"
+                   th:value="${price}">
+        </div>
+
+        <input type="hidden" name="bookID" th:value="${bookID}">
+
+        <button type="submit" class="btn btn-dark">Save Changes</button>
+    </form>
+</section>
+</body>
+<footer>
+    <div th:include="layout::footer"></div>
+</footer>
+</html>

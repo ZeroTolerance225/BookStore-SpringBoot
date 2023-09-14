@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<header>
+
+    <div th:include="layout::header"></div>
+
+</header>
+<br>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60"style="background-color:blanchedalmond">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span>Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/about"><span class="glyphicon glyphicon-book"></span>ABOUT US</a></li>
+                <li><a href="/stock"><span class="glyphicon glyphicon-align-justify"></span>STOCK</a></li>
+                <li><a href="/contact"><span class="glyphicon glyphicon-phone"></span>CONTACT US</a></li>
+                <li><a href="/admin/books/view"><span class="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron text-center">
+    <h1>About Us</h1>
+</div>
+<p style = "font-family: 'Trebuchet MS', sans-serif;color:black;margin: 50px;font-size: 20px;">
+    Hello I am Moby Dickens and this is my story...
+</p>
+<p style = "font-family: 'Trebuchet MS', sans-serif;color:black;margin: 50px;font-size: 20px;">
+I used to be a normal man until one foggy May day in Ohio. I was on a business trip for my accounting firm
+    when I came across a strange bookstore by the name of Sam Walker. The name of the bookstore was the
+    same as its owner Sam. I was looking for a book to read in my free time, so I indulged myself with a
+    visit. After grabbing a copy of a new book I began to chat up the owner in hopes of a discount. In the
+    middle of our conversation he asked if I was interested in buying his bookstore. I jokingly replied that I
+    did not have a lot of cash on hand to avoid any further offers. After my reply he mentioned that all
+    he would charge me was one dollar since he wanted to get out of the business. I immediately said yes
+    in hopes of being able to resell the store for a higher profit. I cannot begin to describe what a mistake
+    that agreement was. As soon as I said yes shackles appeared on Sam.
+    <br><br>
+    He then continually jumped for joy as
+    he spoke of freedom. When the shackles disappeared from his wrists, they appeared on mine. Sam then described to me the cycle of ownership the bookstore went through.
+    Every owner needs to work at the bookstore for ten years before being able to sell the store for a dollar.
+    Once the sale is made they will regain their freedom from the curse that had been placed on the store long
+    ago. As the Bookstore changes ownership the name also changes to the new owners name. Then right before leaving his somberly said that he could finally see his wife and children again. Finally,
+    he uttered a bone chilling statement that I still think of to this day. He looked at the book store and said,
+    "She is yours now. And you will regret it every day you live in this prison."
+</p>
+</body>
+<footer>
+    <div th:include="layout::footer"></div>
+</footer>
+</html>

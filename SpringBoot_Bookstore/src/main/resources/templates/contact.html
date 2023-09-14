@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Contact Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    h1 {text-align: center;}
+    h4 {text-align: center;}
+    h5 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ffebcd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #cccccc;
+      color: blanchedalmond;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #cccccc;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #ffebcd;
+      padding: 20px;
+    }
+  </style>
+</head>
+<header>
+
+  <div th:include="layout::header"></div>
+
+</header>
+<br>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60"style="background-color:blanchedalmond">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span>Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/about"><span class="glyphicon glyphicon-book"></span>ABOUT US</a></li>
+        <li><a href="/stock"><span class="glyphicon glyphicon-align-justify"></span>STOCK</a></li>
+        <li><a href="/contact"><span class="glyphicon glyphicon-phone"></span>CONTACT US</a></li>
+        <li><a href="/admin/books/view"><span class="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Contact US</h1>
+</div>
+
+<div class="container">
+  <form action="/contact">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Your subject..">
+
+    <label for="body">Subject</label>
+    <textarea id="body" name="body" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="submit">
+
+    <br><br>
+    <H4>Phone Number:</H4>
+    <h5> (248) 434-5508</h5>
+
+    <address>
+      <H4>Email:</H4>
+      <div>
+        <a href="mailto:MobyDickens@gmail.com">MobyDickens@gmail.com</a>.<br>
+      </div>
+
+    </address>
+
+    <H4>Address</H4>
+    <h5> 127 General Ave</h5>
+    <h5> Harrisburg, PA 17112</h5>
+
+  </form>
+</div>
+
+</body>
+<footer>
+  <div th:include="layout::footer"></div>
+</footer>
+</html>
